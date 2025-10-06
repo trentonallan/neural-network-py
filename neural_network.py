@@ -171,7 +171,7 @@ frank = np.array([20, 2])  # 155 pounds, 68 inches
 print("Emily: %.3f" % network.feedforward(emily)) # 0.951 - F
 print("Frank: %.3f" % network.feedforward(frank)) # 0.039 - M
 
-# Train our neural network!
+# Train the network
 network = OurNeuralNetwork()
 network.train(data, all_y_trues)
 
