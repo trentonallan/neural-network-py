@@ -184,3 +184,11 @@ print("Emily: %.3f" % network.feedforward(emilytwo)) # 0.951 - F
 print("Frank: %.3f" % network.feedforward(franktwo)) # 0.039 - M
 print("Trenton: %.3f" % network.feedforward(trenton)) # M
 
+# Test convergence
+print("\n=== TRAINING NEURAL NETWORK ===")
+network = OurNeuralNetwork()
+network.train(data, all_y_trues)
+
+print("\n=== FINAL PREDICTIONS ===")
+print("Emily: %.3f" % network.feedforward(emily))
+print("Frank: %.3f" % network.feedforward(frank))
