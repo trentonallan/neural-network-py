@@ -1,6 +1,6 @@
 # Neural Network from Scratch
 
-2-layer feedforward network in pure NumPy with hand-coded backpropagation. No frameworks, no autograd - all 12 partial derivatives manually derived and implemented.
+2-layer feedforward network in pure NumPy with hand-coded backpropagation. No frameworks, no autograd. All 12 partial derivatives manually derived and implemented.
 
 ## Implementation
 
@@ -54,15 +54,15 @@ Smooth convergence validates gradient calculations.
 
 ## Key Challenges
 
-**Vanishing gradients:** Sigmoid derivative σ'(x) = σ(x)(1-σ(x)) approaches zero at extremes. Deeper networks would need different activations (ReLU, etc).
+**Vanishing gradients:** Sigmoid derivative σ'(x) = σ(x)(1-σ(x)) approaches zero at extremes. Deeper networks would need different activations like ReLU.  
 
-**Manual differentiation:** Each parameter needs explicit gradient derivation. Error in any single derivative breaks convergence - no autograd to catch mistakes.
+**Manual differentiation:** Each parameter needs explicit gradient derivation. Error in any single derivative breaks convergence without autograd to catch mistakes.
 
 **Architecture constraints:** Fully connected means O(n²) parameters between layers. Had to cache all intermediate sums during forward pass for backward computation.
 
 ## What This Demonstrates
 
-- Calculus fundamentals (chain rule, partial derivatives)
+- Calculus application (chain rule, partial derivatives)
 - Backpropagation algorithm from first principles
 - Gradient descent optimization
 - Why frameworks like PyTorch exist (autograd is non-trivial)
@@ -80,17 +80,6 @@ python neural_network.py
 
 **Trenton Allan**  
 Northeastern University  
-[allan.tr@northeastern.edu](mailto:allan.tr@northeastern.edu)
+B.S. Computer Science (AI concentration)   
+[allan.tr@northeastern.edu](mailto:allan.tr@northeastern.edu) | [LinkedIn](https://linkedin.com/in/trentonallan)
 
----
-
-**Changes:**
-- Cut the explanatory/teaching tone
-- Assumes reader knows what backprop is
-- Shows code instead of explaining concepts
-- Focuses on technical decisions and challenges
-- More concise, less "here's what I learned"
-- Demonstrates competence through brevity
-- Still honest about scope but doesn't dwell on it
-
-Now it reads like documentation from someone who knows what they're doing, not a tutorial.
